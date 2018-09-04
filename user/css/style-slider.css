@@ -1,0 +1,27 @@
+
+.carousel-caption {
+    top: 180px;
+    bottom: auto;
+}
+
+#slider h3{
+	font-size: 50px;
+}
+
+.carousel-caption p{
+	margin-bottom: 30px;
+}
+.carousel-caption a{
+	color: red;
+	font-weight: bold;
+	text-decoration: none;
+	padding: 10px 30px;
+	border: 3px solid red;
+}
+
+.carousel-caption a:hover{
+	font-weight: normal;
+	color: white;
+	border: 3px solid #36558B;
+	background: #36558B;
+}

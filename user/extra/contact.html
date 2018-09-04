@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Contact</title>
+
+	<!-- Bootstrap core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="css/full-slider.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style-slider.css">
+	<link rel="stylesheet" type="text/css" href="css/custom-navbar.css">
+
+</head>
+
+<body">
+
+<!-- Navigation  navbar-dark bg-dark-->
+	<nav class="navbar navbar-expand-lg navbar-dark  fixed-top" id="navigationbar">
+	    <div class="container" id="nav-container">
+		    <a class="navbar-brand" href="home.html">Foodie</a>
+		    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		      <span class="navbar-toggler-icon"></span>
+		    </button>
+		    <div class="collapse navbar-collapse" id="navbarResponsive">
+		        <ul class="navbar-nav ml-auto">
+
+			        <li class="nav-item">
+			          <a class="nav-link" href="home.html" id="nav-item-name">Home
+			          </a>
+			        </li>
+
+			        <li class="nav-item">
+			          <a class="nav-link" id="nav-item-name" href="about.html" >About</a>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" id="nav-item-name" href="#">Menu</a>
+			        </li>
+			        <li class="nav-item active">
+			          <a class="nav-link" id="nav-item-name" href="contact.html">Contact</a>
+			            <span class="sr-only">(current)</span>
+			        </li>
+			        <li class="nav-item">
+			          <a class="nav-link" id="nav-item-name" href="#">Cart</a>
+			        </li>
+		        </ul>
+		    </div>
+	    </div>
+	</nav>
+
+	<header id="slider">
+	  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+	
+
+	    <div class="carousel-inner" role="listbox">
+	      <!-- Slide One - Set the background image for this slide in the line below -->
+	      <div class="carousel-item active" style="background-image: url('images/aboutBackground1edited.jpg');width: 100%; ">
+	        <div class="carousel-caption d-none d-sm-block">
+	          <h3 style="font-size: 70px; letter-spacing: 20px;">Contact US</h3>
+	          <p></p>
+	        </div>
+	      </div>
+	      <!-- Slide Two - Set the background image for this slide in the line below -->
+	    </div>
+	  </div>
+	</header>
+
+	<!-- Page Content -->
+	<section class="py-5">
+	  <div class="container">
+	    <h1>BEST RESTAURANT IN TOWN</h1>
+	    <p></p>
+	  </div>
+	</section>
+
+	<!-- Footer -->
+	<footer class="py-5 bg-dark">
+	  <div class="container">
+	    <p class="m-0 text-center text-white">Developed by Munna</p>
+	  </div>
+	  <!-- /.container -->
+
+	</footer>
+
+	<!-- Bootstrap core JavaScript -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		var a = $(".navbar").offset().top;
+
+		$(document).scroll(function(){
+		    if($(this).scrollTop() > a)
+		    {   
+		       $('.navbar').css({"background":"rgb(52, 58, 64)"});
+		    } else {
+		       $('.navbar').css({"background":"transparent"});
+		    }
+		});
+
+	</script>
+
+</body>
+
+</html>

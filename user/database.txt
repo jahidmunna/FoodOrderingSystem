@@ -1,0 +1,71 @@
+CREATE TABLE availableItem(
+    id int AUTO_INCREMENT,
+    item_id int NOT NULL,
+    date DATE not null,
+    PRIMARY KEY(id),
+    UNIQUE KEY(item_id,date),
+    FOREIGN KEY (item_id) REFERENCES item(id)
+    
+);
+
+
+SELECT i.id, i.name
+FROM item i INNER JOIN availableitem ai ON ai.item_id = i.id
+
+
+
+CREATE TABLE specialItem(
+    id int AUTO_INCREMENT,
+    item_id int NOT NULL,
+    date DATE not null,
+    PRIMARY KEY(id),
+    UNIQUE KEY(item_id,date),
+    FOREIGN KEY (item_id) REFERENCES item(id)
+    
+);
+
+
+CREATE TABLE discountItem(
+    id int AUTO_INCREMENT,
+    percentage int NOT NULL,
+    item_id int NOT NULL,
+    date DATE not null,
+    PRIMARY KEY(id),
+    UNIQUE KEY(item_id,date),
+    FOREIGN KEY (item_id) REFERENCES item(id)
+    
+);
+
+CREATE TABLE users(
+    id INT AUTO_INCREMENT,
+    name VARCHAR(30) NOT NULL,
+    password VARCHAR (50) NOT NULL,
+    phonenumber VARCHAR(14) NOT NULL,
+    UNIQUE KEY (name),
+    PRIMARY KEY(id)
+);
+
+
+CREATE TABLE orderlist(
+    id INT AUTO_INCREMENT,
+    user_id INT NOT NULL,
+    item_id INT NOT NULL,
+    price INT NOT NULL,
+    quantity INT NOT NULL,
+    date DATE NOT NULL,
+    confirmOrder TINYINT(1) NOT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (user_id) REFERENCES users(id),
+    FOREIGN KEY (item_id) REFERENCES item(id)
+);
+
+
+CREATE TABLE orderFromTableNumber(
+    id INT NOT NULL AUTO_INCREMENT,
+    tableNumber INT NOT NULL,
+    user_id INT NOT NULL,
+    date DATE NOT NULL,
+    adminNotice TINYINT(1) NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
